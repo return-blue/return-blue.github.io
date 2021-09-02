@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Hexo</title>
+  <title>LNMP高可用架构部署 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -23,13 +23,29 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="LNMP高可用架构 LNMP项目实战：L：Linux（centos 7.6） http:&#x2F;&#x2F;mirrors.cqu.edu.cn&#x2F;CentOS&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64&#x2F;N：Nginx（1.12.2） https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;download.htmlM：MySQL（5.6.43） https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F;5.6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LNMP高可用架构部署">
+<meta property="og:url" content="http://example.com/2021/09/02/LNMP/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="LNMP高可用架构 LNMP项目实战：L：Linux（centos 7.6） http:&#x2F;&#x2F;mirrors.cqu.edu.cn&#x2F;CentOS&#x2F;7.6.1810&#x2F;isos&#x2F;x86_64&#x2F;N：Nginx（1.12.2） https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;download.htmlM：MySQL（5.6.43） https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F;5.6">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517185758093.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517184354531.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517184931538.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517195521528.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517195725396.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517184354531.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517184931538.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517204925123.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517204908566.png">
+<meta property="og:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517205426554.png">
+<meta property="article:published_time" content="2021-09-02T03:30:09.066Z">
+<meta property="article:modified_time" content="2021-09-02T03:37:21.171Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="LNMP">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/09/02/LNMP/%5Cimages%5CLNMP.assets%5Cimage-20200517185758093.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -172,36 +188,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LNMP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/02/LNMP/" class="archive-article-date">
-  	<time datetime="2021-09-02T03:30:09.066Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/02/LNMP/">LNMP高可用架构部署</a>
+    <h1 class="article-title" itemprop="name">
+      LNMP高可用架构部署
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/09/02/LNMP/" class="archive-article-date">
+  	<time datetime="2021-09-02T03:30:09.066Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-02</time>
+</a>
+        <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.2k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">12分</span>
+      </span>
+    </span>
+</div>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="LNMP高可用架构"><a href="#LNMP高可用架构" class="headerlink" title="LNMP高可用架构"></a>LNMP高可用架构</h2><p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517185758093.png" alt="image-20200517185758093"></p>
+<p>LNMP项目实战：<br>L：Linux（centos 7.6） <a target="_blank" rel="noopener" href="http://mirrors.cqu.edu.cn/CentOS/7.6.1810/isos/x86_64/">http://mirrors.cqu.edu.cn/CentOS/7.6.1810/isos/x86_64/</a><br>N：Nginx（1.12.2） <a target="_blank" rel="noopener" href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a><br>M：MySQL（5.6.43） <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.6.html#downloads">https://dev.mysql.com/downloads/mysql/5.6.html#downloads</a><br>P：PHP（7.2.15） <a target="_blank" rel="noopener" href="http://php.net/downloads.php">http://php.net/downloads.php</a><br>Worldpress（5.0.3）：<a target="_blank" rel="noopener" href="https://cn.wordpress.org/download/">https://cn.wordpress.org/download/</a></p>
+<h2 id="数据库服务器-172-31-7-107"><a href="#数据库服务器-172-31-7-107" class="headerlink" title="数据库服务器 172.31.7.107"></a>数据库服务器 172.31.7.107</h2><p>yum install mysql 或者编译安装 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment">#mysql-install.sh</span></span><br><span class="line">DIR=`<span class="built_in">pwd</span>`</span><br><span class="line">NAME=<span class="string">&quot;mysql-5.6.34-linux-glibc2.5-x86_64.tar.gz&quot;</span></span><br><span class="line">FULL_NAME=<span class="variable">$&#123;DIR&#125;</span>/<span class="variable">$&#123;NAME&#125;</span></span><br><span class="line">DATA_DIR=<span class="string">&quot;/data/mysql&quot;</span></span><br><span class="line">yum install perl-Data-Dumper  libaio vim gcc gcc-c++ wget autoconf net-tools</span><br><span class="line">lrzsz  -y</span><br><span class="line">yum install curl policycoreutils openssh-server openssh-clients postfix -y</span><br><span class="line"><span class="keyword">if</span> [ -f <span class="variable">$&#123;FULL_NAME&#125;</span> ];<span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;安装文件存在&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;安装文件不存在&quot;</span></span><br><span class="line">  <span class="built_in">exit</span> 3</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">if</span> [ -h /usr/<span class="built_in">local</span>/mysql ];<span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Mysql 已经安装&quot;</span></span><br><span class="line">  <span class="built_in">exit</span> 3</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"> tar xvf <span class="variable">$&#123;FULL_NAME&#125;</span>  -C /usr/<span class="built_in">local</span>/src</span><br><span class="line">  ln -sv /usr/<span class="built_in">local</span>/src/mysql-5.6.34-linux-glibc2.5-x86_64 /usr/<span class="built_in">local</span>/mysql</span><br><span class="line">  <span class="keyword">if</span> id mysql;<span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;mysql 用户已经存在，跳过创建用户过程&quot;</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">   useradd  -r  -s /sbin/nologin mysql</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"> </span><br><span class="line">  <span class="keyword">if</span> id mysql;<span class="keyword">then</span></span><br><span class="line"> chown  -R mysql.mysql /usr/<span class="built_in">local</span>/mysql/*</span><br><span class="line">    <span class="keyword">if</span> [ ! -d /data/mysql ];<span class="keyword">then</span></span><br><span class="line">      mkdir -pv /data/mysql &amp;&amp; chown  -R mysql.mysql /data  -R</span><br><span class="line">     /usr/<span class="built_in">local</span>/mysql/scripts/mysql_install_db  --user=mysql --</span><br><span class="line">datadir=/data/mysql  --basedir=/usr/<span class="built_in">local</span>/mysql/</span><br><span class="line">cp /usr/<span class="built_in">local</span>/src/mysql-5.6.34-linux-glibc2.5-x86_64/support-</span><br><span class="line">files/mysql.server /etc/init.d/mysqld</span><br><span class="line">chmod a+x /etc/init.d/mysqld</span><br><span class="line">cp <span class="variable">$&#123;DIR&#125;</span>/my.cnf  /etc/my.cnf</span><br><span class="line">ln -sv /usr/<span class="built_in">local</span>/mysql/bin/mysql /usr/bin/mysql</span><br><span class="line">/etc/init.d/mysqld start</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="string">&quot;MySQL数据目录已经存在,&quot;</span></span><br><span class="line"><span class="built_in">exit</span> 3</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#my.cnf</span></span><br><span class="line">[mysqld]</span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br><span class="line">user=mysql</span><br><span class="line">symbolic-links=0</span><br><span class="line">datadir=/data/mysql</span><br><span class="line">innodb_file_per_table=1</span><br><span class="line">[client]</span><br><span class="line">port=3306</span><br><span class="line">socket=/var/lib/mysql/mysql.sock</span><br><span class="line">[mysqld_safe]</span><br><span class="line">log-error=/var/<span class="built_in">log</span>/mysqld.log</span><br><span class="line">pid-file=/tmp/mysql.pid</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">创建WordPress账户</span><br><span class="line">#启动mysql并创建数据库</span><br><span class="line">[root@s2 ~]# /etc/init.d/mysqld start</span><br><span class="line">[root@s2 ~]# ln -sv /data/mysql/mysql.sock /var/lib/mysql/mysql.sock</span><br><span class="line">[root@s2 ~]# /usr/local/mysql/bin/mysql</span><br><span class="line">Welcome to the MySQL monitor. Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 2</span><br><span class="line">Server version: 5.6.43 MySQL Community Server (GPL)</span><br><span class="line">Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line">Type &#x27;help;&#x27; or &#x27;\h&#x27; for help. Type &#x27;\c&#x27; to clear the current input statement.</span><br><span class="line">mysql&gt; CREATE DATABASE wordpress;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON wordpress.* TO &quot;wordpress&quot;@&quot;172.31.7.%&quot;</span><br><span class="line">IDENTIFIED BY &quot;123456&quot;;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test |</span><br><span class="line">| wordpress |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">测试</span><br><span class="line">[root@s1 etc]# mysql -uwordpress -h192.168.7.102 -p123456</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="NFS服务器-172-31-7-108"><a href="#NFS服务器-172-31-7-108" class="headerlink" title="NFS服务器 172.31.7.108"></a>NFS服务器 172.31.7.108</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum install nfs-utils nfs-server</span><br><span class="line">mkdir /data/wordpress #创建共享目录</span><br><span class="line">vim /etc/exports</span><br><span class="line">/data/wordpress *(rw,root_squash)</span><br><span class="line"></span><br><span class="line">systemctl restart nfs</span><br><span class="line">systemctl enable nfs</span><br></pre></td></tr></table></figure>
+
+<h2 id="nginx服务器172-31-7-105-172-31-7-106"><a href="#nginx服务器172-31-7-105-172-31-7-106" class="headerlink" title="nginx服务器172.31.7.105 172.31.7.106"></a>nginx服务器172.31.7.105 172.31.7.106</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum  install nfs-utils -y</span><br><span class="line">编译安装或者yum nginx</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="comment"># 运行该脚本之前 请配置好yum源和epel源</span></span><br><span class="line">FILE=nginx-1.16.1.tar.gz</span><br><span class="line">PACKAGE=`<span class="built_in">echo</span> <span class="variable">$FILE</span>| sed -rn <span class="string">&#x27;s/^(.*[0-9.]+)\.[[:alpha:]]+.*$/\1/p&#x27;</span>`</span><br><span class="line">INSTALL_DIR=/apps/<span class="variable">$PACKAGE</span></span><br><span class="line">URL=https://nginx.org/download/<span class="variable">$FILE</span></span><br><span class="line">SUBDIR=`basename <span class="variable">$INSTALL_DIR</span>`</span><br><span class="line">COLOR=<span class="string">&quot;\033[1;$[RANDOM%7+31]m&quot;</span></span><br><span class="line">END=<span class="string">&quot;\033[0m&quot;</span></span><br><span class="line">[ -d <span class="variable">$INSTALL_DIR</span> ] &amp;&amp;  &#123; <span class="built_in">echo</span> <span class="string">&quot;Software installed &quot;</span>;<span class="built_in">exit</span>; &#125;</span><br><span class="line">SUFFIX=`<span class="built_in">echo</span> <span class="variable">$FILE</span> | sed -rn <span class="string">&#x27;s/.*\.([^.]+)$/\1/p&#x27;</span>`</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;<span class="variable">$COLOR</span> Start install ✧*｡٩(ˊωˋ*)و✧*｡ <span class="variable">$END</span> &quot;</span></span><br><span class="line">sleep 2</span><br><span class="line">yum install -y vim lrzsz tree  psmisc lsof tcpdump wget tar gcc gcc-c++ glibc glibc-devel pcre pcre-devel openssl openssl-devel systemd-devel net-tools iotop bc zip unzip zlib-devel bash-completion nfs-utils automake libxml2 libxml2-devel libxslt libxslt-devel perl perl-ExtUtils-Embed &amp;&gt; /dev/null</span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src</span><br><span class="line"><span class="comment">#wget $URL</span></span><br><span class="line"><span class="keyword">case</span> <span class="variable">$SUFFIX</span> <span class="keyword">in</span></span><br><span class="line">gz|bz2|xz)</span><br><span class="line">  tar xf <span class="variable">$FILE</span></span><br><span class="line">  ;;</span><br><span class="line">zip)</span><br><span class="line">  unzip  <span class="variable">$FILE</span></span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;unidentifiable&quot;</span></span><br><span class="line">  <span class="built_in">exit</span> 5</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$PACKAGE</span>/</span><br><span class="line">./configure \</span><br><span class="line">--prefix=<span class="variable">$INSTALL_DIR</span> \</span><br><span class="line">--user=nginx \</span><br><span class="line">--group=nginx \</span><br><span class="line">--with-http_ssl_module \</span><br><span class="line">--with-http_v2_module \</span><br><span class="line">--with-http_realip_module \</span><br><span class="line">--with-http_stub_status_module \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--with-pcre \</span><br><span class="line">--with-stream \</span><br><span class="line">--with-stream_ssl_module \</span><br><span class="line">--with-stream_realip_module</span><br><span class="line">make &amp;&amp; make install &amp;&gt; /dev/null</span><br><span class="line">useradd nginx -s /sbin/nologin -u 2000</span><br><span class="line">chown nginx.nginx -R <span class="variable">$INSTALL_DIR</span></span><br><span class="line">mkdir -pv <span class="variable">$INSTALL_DIR</span>/run/ &amp;&gt; /dev/null</span><br><span class="line">sed -ri <span class="string">&quot;s@^#pid.*@pid <span class="variable">$INSTALL_DIR</span>/run/nginx.pid;@g&quot;</span> <span class="variable">$INSTALL_DIR</span>/conf/nginx.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;PATH=$INSTALL_DIR/sbin:$PATH&#x27;</span> &gt; /etc/profile.d/<span class="variable">$SUBDIR</span>.sh</span><br><span class="line"><span class="built_in">source</span> /etc/profile.d/<span class="variable">$SUBDIR</span>.sh</span><br><span class="line">cat &gt; /usr/lib/systemd/system/nginx.service&lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[Unit]</span></span><br><span class="line"><span class="string">Description=The nginx HTTP and reverse proxy server</span></span><br><span class="line"><span class="string">After=network.target remote-fs.target nss-lookup.target</span></span><br><span class="line"><span class="string">[Service]</span></span><br><span class="line"><span class="string">Type=forking</span></span><br><span class="line"><span class="string">PIDFile=$INSTALL_DIR/run/nginx.pid</span></span><br><span class="line"><span class="string"># Nginx will fail to start if /run/nginx.pid already exists but has the wrong</span></span><br><span class="line"><span class="string"># SELinux context. This might happen when running nginx -t from the cmdline.</span></span><br><span class="line"><span class="string"># https://bugzilla.redhat.com/show_bug.cgi?id=1268621</span></span><br><span class="line"><span class="string">ExecStartPre=/usr/bin/rm -f $INSTALL_DIR/run/nginx.pid</span></span><br><span class="line"><span class="string">ExecStartPre=$INSTALL_DIR/sbin/nginx -t</span></span><br><span class="line"><span class="string">ExecStart=$INSTALL_DIR/sbin/nginx</span></span><br><span class="line"><span class="string">ExecReload=/bin/kill -s HUP \$MAINPID</span></span><br><span class="line"><span class="string">KillSignal=SIGQUIT</span></span><br><span class="line"><span class="string">TimeoutStopSec=5</span></span><br><span class="line"><span class="string">[Install]</span></span><br><span class="line"><span class="string">WantedBy=multi-user.target</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> nginx</span><br><span class="line">systemctl start nginx</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;<span class="variable">$COLOR</span> installed successfully ლ(╹◡╹ლ)<span class="variable">$END</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">php 编译安装</span><br><span class="line">[root@s1 ~]<span class="comment"># yum -y install wget vim pcre pcre-devel openssl openssl-devel</span></span><br><span class="line">libicu-devel gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel</span><br><span class="line">freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-</span><br><span class="line">devel glib2 glib2-devel ncurses ncurses-devel curl curl-devel krb5-devel</span><br><span class="line">libidn libidn-devel openldap openldap-devel nss_ldap jemalloc-devel cmake</span><br><span class="line">boost-devel bison automake libevent libevent-devel gd gd-devel libtool*</span><br><span class="line">libmcrypt libmcrypt-devel mcrypt mhash libxslt libxslt-devel readline</span><br><span class="line">readline-devel gmp gmp-devel libcurl libcurl-devel openjpeg-devel</span><br><span class="line">[root@s1 src]<span class="comment"># pwd</span></span><br><span class="line">/usr/<span class="built_in">local</span>/src</span><br><span class="line">[root@s1 src]<span class="comment"># tar xf php-7.2.15.tar.gz</span></span><br><span class="line">[root@s1 src]<span class="comment"># cd php-7.2.15</span></span><br><span class="line">[root@s1 php-7.2.15]<span class="comment"># ./configure --prefix=/apps/php --enable-fpm --with-fpm-</span></span><br><span class="line">user=nginx --with-fpm-group=nginx --with-pear --with-curl --with-png-dir --with-</span><br><span class="line">freetype-dir --with-iconv --with-mhash --with-zlib --with-xmlrpc --with-</span><br><span class="line">xsl --with-openssl --with-mysqli --with-pdo-mysql --disable-debug --<span class="built_in">enable</span>-</span><br><span class="line">zip --enable-sockets --enable-soap --enable-inline-optimization --<span class="built_in">enable</span>-</span><br><span class="line">xml --enable-ftp --enable-exif --enable-wddx --enable-bcmath --enable-calendar</span><br><span class="line">--enable-shmop --enable-dba --enable-sysvsem --enable-sysvshm --<span class="built_in">enable</span>-</span><br><span class="line">sysvmsg</span><br><span class="line">[root@s1 php-7.2.15]<span class="comment"># make -j 2</span></span><br><span class="line">[root@s1 php-7.2.15]<span class="comment"># make install</span></span><br><span class="line"><span class="comment">#生成配置文件</span></span><br><span class="line">[root@s1 php-7.2.15]<span class="comment"># cd /apps/php/etc/php-fpm.d/</span></span><br><span class="line">[root@s1 php-fpm.d]<span class="comment"># cp www.conf.default www.conf</span></span><br><span class="line">[root@s1 php-fpm.d]<span class="comment"># cp /usr/local/src/php-7.2.15/php.ini-production /apps/php/etc/php.ini</span></span><br><span class="line">[root@s1 php-fpm.d]<span class="comment"># useradd nginx -s /sbin/nologin -u 1001</span></span><br><span class="line">[root@s1 php-fpm.d]<span class="comment"># grep -v &quot;;&quot; www.conf | grep -v &quot;^$&quot;</span></span><br><span class="line">[www]</span><br><span class="line">user = nginx</span><br><span class="line">group = nginx</span><br><span class="line">listen = 127.0.0.1:9000</span><br><span class="line">listen.allowed_clients = 127.0.0.1</span><br><span class="line">pm = dynamic</span><br><span class="line">pm.max_children = 50</span><br><span class="line">pm.start_servers = 30</span><br><span class="line">pm.min_spare_servers = 30</span><br><span class="line">pm.max_spare_servers = 35</span><br><span class="line">pm.status_path = /pm_status</span><br><span class="line">ping.path = /ping</span><br><span class="line">ping.response = pong</span><br><span class="line">access.log = <span class="built_in">log</span>/<span class="variable">$pool</span>.access.log</span><br><span class="line">slowlog = <span class="built_in">log</span>/<span class="variable">$pool</span>.log.slow</span><br><span class="line">[root@s1 etc]<span class="comment"># mkdir /apps/php/log/ #日志文件路径</span></span><br><span class="line">[root@s1 etc]<span class="comment"># cd /apps/php/etc/</span></span><br><span class="line">[root@s1 etc]<span class="comment"># cp php-fpm.conf.default php-fpm.conf</span></span><br><span class="line"><span class="comment">#检测语法并启动php-fpm：</span></span><br><span class="line">[root@s1 etc]<span class="comment"># /apps/php/sbin/php-fpm -t</span></span><br><span class="line">[06-Mar-2019 18:44:46] NOTICE: configuration file /apps/php/etc/php-fpm.conftest is successful</span><br><span class="line"><span class="comment">#验证php-fpm：</span></span><br><span class="line">[root@s1 etc]<span class="comment"># /apps/php/sbin/php-fpm -c /apps/php/etc/php.ini</span></span><br><span class="line">[root@s1 etc]<span class="comment"># ps -ef | grep php-fpm</span></span><br><span class="line">root 115708 1 0 18:45 ? 00:00:00 php-fpm: master process</span><br><span class="line">(/apps/php/etc/php-fpm.conf)</span><br><span class="line">nginx 115709 115708 0 18:45 ? 00:00:00 php-fpm: pool nginx</span><br><span class="line">nginx 115710 115708 0 18:45 ? 00:00:00 php-fpm: pool nginx</span><br><span class="line">[root@s1 etc]<span class="comment"># netstat -tanlp | grep php-fpm</span></span><br><span class="line">tcp 0 0 127.0.0.1:9000 0.0.0.0:* LISTEN 115708/php-fpm: mas</span><br><span class="line"></span><br><span class="line"><span class="comment">#php测试</span></span><br><span class="line">[root@s1 ~]<span class="comment"># mkdir /data/nginx/wordpress -p</span></span><br><span class="line">[root@s1 ~]<span class="comment"># chown nginx.nginx /apps/nginx /data/nginx/wordpress -R</span></span><br><span class="line"></span><br><span class="line">[root@s1 ~]<span class="comment"># /apps/nginx/sbin/nginx -s reload</span></span><br><span class="line">[root@s1 ~]<span class="comment"># vim /data/nginx/wordpress/index.php</span></span><br><span class="line">&lt;?php</span><br><span class="line">phpinfo();</span><br><span class="line">?&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="haproxy-keepalived服务器172-31-7-101-172-31-7-102"><a href="#haproxy-keepalived服务器172-31-7-101-172-31-7-102" class="headerlink" title="haproxy+keepalived服务器172.31.7.101 172.31.7.102"></a>haproxy+keepalived服务器172.31.7.101 172.31.7.102</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install haproxy keepalived ipvsadm -y</span><br><span class="line"></span><br><span class="line">vim /etc/keepalived/keepalived.conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>101配置</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517184354531.png" alt="image-20200517184354531"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">删除vritual_server 192.168.200.100 443 以下全部内容包括这行</span><br><span class="line"></span><br><span class="line">systemctl restart keepalived</span><br><span class="line">systemctl <span class="built_in">enable</span> keepalived</span><br><span class="line"></span><br><span class="line">检测</span><br><span class="line">用别的服务器ping 172.31.7.249 通了说明没问题</span><br></pre></td></tr></table></figure>
+
+<p>102配置</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517184931538.png" alt="image-20200517184931538"></p>
+<p>配置haproxy  使得 nginx通过haproxy访问数据库 </p>
+<p>删除main frontent which proxys to the backends以下内容 并添加如下</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517195521528.png" alt="image-20200517195521528"></p>
+<p>重启haproxy生效</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="nginx服务器172-31-7-105-172-31-7-106配置"><a href="#nginx服务器172-31-7-105-172-31-7-106配置" class="headerlink" title="nginx服务器172.31.7.105 172.31.7.106配置"></a>nginx服务器172.31.7.105 172.31.7.106配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">vim /apps/nginx/conf/nginx.conf</span><br><span class="line">user  nginx;</span><br><span class="line">worker_processes  auto;</span><br><span class="line">include /apps/nginx/conf/conf.d/*.conf;</span><br><span class="line">server &#123;</span><br><span class="line">listen 80;</span><br><span class="line">server_name www.lizi.net;</span><br><span class="line">location / &#123;</span><br><span class="line">root /data/nginx/wordpress;</span><br><span class="line">index index.php index.html index.htm;</span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$http_user_agent</span> ~ <span class="string">&quot;ApacheBench|WebBench|TurnitinBot|Sogou web</span></span><br><span class="line"><span class="string">spider|Grid Service&quot;</span>) &#123;</span><br><span class="line"><span class="comment">#proxy_pass http://www.baidu.com;</span></span><br><span class="line"><span class="built_in">return</span> 403;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">location ~ \.php$ &#123;</span><br><span class="line">root /data/nginx/wordpress;</span><br><span class="line">fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">fastcgi_index index.php;</span><br><span class="line">fastcgi_param SCRIPT_FILENAME $document_root<span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">include fastcgi_params;</span><br><span class="line">&#125;</span><br><span class="line">error_page 500 502 503 504 /50x.html;</span><br><span class="line">location = /50x.html &#123;</span><br><span class="line">root html;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[root@s1 ~]<span class="comment"># cd /data/nginx/wordpress/</span></span><br><span class="line">[root@s1 wordpress]<span class="comment"># mv index.php /opt/</span></span><br><span class="line">[root@s1 wordpress]<span class="comment"># unzip wordpress-5.0.3-zh_CN.zip</span></span><br><span class="line">[root@s1 wordpress]<span class="comment"># mv wordpress/* .</span></span><br><span class="line">[root@s1 wordpress]<span class="comment"># mv wordpress wordpress-5.0.3-zh_CN.zip /opt/</span></span><br><span class="line">浏览器输入ip地址或者域名测试www.lizi.net</span><br><span class="line">修改hosts文件 分别使用106 和105 测试wordpress是否正常</span><br><span class="line">写文章测试</span><br><span class="line"></span><br><span class="line">如果有图片将图片放在存储108里面</span><br><span class="line"><span class="built_in">cd</span> /data/nginx/wordpress/wp-content/</span><br><span class="line">scp -r ./* 172.31.7.107:/data/wordpress/</span><br><span class="line"></span><br><span class="line">showmount -e 172.31.7.108<span class="comment"># 查看共享目录</span></span><br><span class="line"></span><br><span class="line">mount -t nfs 172.31.7.108:/data/wordpress /data/nginx/wordpress/wp-content/uploads/</span><br><span class="line"></span><br><span class="line">chown nginx.nginx /data/nginx/ /apps/nginx -R</span><br><span class="line"></span><br><span class="line">vim /etc/fstab</span><br><span class="line">172.31.7.108:/data/wordpress /data/nginx/wordpress/wp-content/uploads/ nfs defaults,_netdev 0 0</span><br><span class="line"></span><br><span class="line">mount -a</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="haproxy-keepalived服务器172-31-7-101-172-31-7-102-1"><a href="#haproxy-keepalived服务器172-31-7-101-172-31-7-102-1" class="headerlink" title="haproxy+keepalived服务器172.31.7.101 172.31.7.102"></a>haproxy+keepalived服务器172.31.7.101 172.31.7.102</h2><p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517195725396.png" alt="image-20200517195725396">syste,ct;</p>
+<p>systemctl restart haproxy</p>
+<p> 因为 backup上没有vip 所以会报错需要添加内核参数 建议都添加 以防master挂掉 重启报错</p>
+<p>vim  /etc/sysctl.conf</p>
+<p>net.ipv4.ip_nonlocal_bind = 1</p>
+<p>sysctl -p</p>
+<p>修改host文件 172.31.7.249  <a target="_blank" rel="noopener" href="http://www.lizi.net/">www.lizi.net</a>  测试是否成功</p>
+<p>已经完成</p>
+<h2 id="LVS-替换haproxy"><a href="#LVS-替换haproxy" class="headerlink" title="LVS  替换haproxy"></a>LVS  替换haproxy</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">在 105 106 分别运行此脚本绑定vip 临时生效</span><br><span class="line">#!/bin/bash</span><br><span class="line">vip=172.31.7.249</span><br><span class="line">mask=&#x27;255.255.255.255&#x27;</span><br><span class="line">dev=lo:1</span><br><span class="line">case $1 in</span><br><span class="line">start)</span><br><span class="line">echo 1 &gt; /proc/sys/net/ipv4/conf/all/arp_ignore</span><br><span class="line">  echo 1 &gt; /proc/sys/net/ipv4/conf/lo/arp_ignore</span><br><span class="line">  echo 2 &gt; /proc/sys/net/ipv4/conf/all/arp_announce</span><br><span class="line">  echo 2 &gt; /proc/sys/net/ipv4/conf/lo/arp_announce</span><br><span class="line">  ifconfig $dev $vip netmask $You can&#x27;t use &#x27;macro parameter character #&#x27; in</span><br><span class="line">math modemask #broadcast $vip up</span><br><span class="line">  #route add -host $vip dev $dev</span><br><span class="line">  ;;</span><br><span class="line">stop)</span><br><span class="line">  ifconfig $dev down</span><br><span class="line">  echo 0 &gt; /proc/sys/net/ipv4/conf/all/arp_ignore</span><br><span class="line">  echo 0 &gt; /proc/sys/net/ipv4/conf/lo/arp_ignore</span><br><span class="line">  echo 0 &gt; /proc/sys/net/ipv4/conf/all/arp_announce</span><br><span class="line">  echo 0 &gt; /proc/sys/net/ipv4/conf/lo/arp_announce</span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  echo &quot;Usage: $(basename $0) start|stop&quot;</span><br><span class="line">  exit 1</span><br><span class="line">  ;;</span><br><span class="line">esac</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">bash lvs-dr.sh start</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在两台lvs服务器配置</p>
+<p>vim  /etc/keepalived/keepalived.conf</p>
+<p>分别配置</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517184354531.png" alt="image-20200517184354531"></p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517184931538.png" alt="image-20200517184931538"></p>
+<p>都要添加</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517204925123.png" alt="image-20200517204925123"></p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517204908566.png" alt="image-20200517204908566"></p>
+<p>重启keepalived</p>
+<p>检测状态</p>
+<p><img src="%5Cimages%5CLNMP.assets%5Cimage-20200517205426554.png" alt="image-20200517205426554"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,96 +320,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/02/LNMP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/09/02/hello-world%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
-  	<time datetime="2021-09-02T02:46:31.688Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/02/hello-world%20-%20%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/09/02/hello-world%20-%20%E5%89%AF%E6%9C%AC/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LNMP%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">LNMP高可用架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8-172-31-7-107"><span class="toc-number">2.</span> <span class="toc-text">数据库服务器 172.31.7.107</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NFS%E6%9C%8D%E5%8A%A1%E5%99%A8-172-31-7-108"><span class="toc-number">3.</span> <span class="toc-text">NFS服务器 172.31.7.108</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx%E6%9C%8D%E5%8A%A1%E5%99%A8172-31-7-105-172-31-7-106"><span class="toc-number">4.</span> <span class="toc-text">nginx服务器172.31.7.105 172.31.7.106</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#haproxy-keepalived%E6%9C%8D%E5%8A%A1%E5%99%A8172-31-7-101-172-31-7-102"><span class="toc-number"></span> <span class="toc-text">haproxy+keepalived服务器172.31.7.101 172.31.7.102</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx%E6%9C%8D%E5%8A%A1%E5%99%A8172-31-7-105-172-31-7-106%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">nginx服务器172.31.7.105 172.31.7.106配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#haproxy-keepalived%E6%9C%8D%E5%8A%A1%E5%99%A8172-31-7-101-172-31-7-102-1"><span class="toc-number">3.</span> <span class="toc-text">haproxy+keepalived服务器172.31.7.101 172.31.7.102</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LVS-%E6%9B%BF%E6%8D%A2haproxy"><span class="toc-number">4.</span> <span class="toc-text">LVS  替换haproxy</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/27/jvm%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8Atomcat%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2021-05-27T11:13:20.084Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/27/jvm%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8Atomcat%E5%AE%89%E8%A3%85/">jvm安装以及tomcat安装</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jvm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
+  
 
 
           </div>
@@ -345,8 +475,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
