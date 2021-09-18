@@ -30,14 +30,14 @@
 <meta property="og:site_name" content="PsL blogs">
 <meta property="og:description" content="MySQL之备份与恢复​    备份数据的目的是为了数据库出现意外情况，如软硬件故障、黑客攻击、误操作等，能够通过备份数据及时还原。避免造成损失。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/86139/Desktop/MySQL之备份与恢复.assets/image-20210915101524385.png">
-<meta property="og:image" content="c:/Users/86139/Desktop/MySQL之备份与恢复.assets/image-20210915112203723.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/return-blue/return-blue.github.io/master/images/MySQLbackup.assets/image-20210915101524385.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/return-blue/return-blue.github.io/master/images/MySQLbackup.assets/image-20210915112203723.png">
 <meta property="article:published_time" content="2021-09-18T02:08:30.374Z">
-<meta property="article:modified_time" content="2021-09-18T02:11:59.099Z">
+<meta property="article:modified_time" content="2021-09-18T02:25:51.608Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="MYSQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/86139/Desktop/MySQL之备份与恢复.assets/image-20210915101524385.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/return-blue/return-blue.github.io/master/images/MySQLbackup.assets/image-20210915101524385.png">
   
     <link rel="alternative" href="/atom.xml" title="PsL blogs" type="application/atom+xml">
   
@@ -223,9 +223,9 @@
 <p>​    备份策略相关术语如下：</p>
 <p>​    <strong>全量备份</strong>：顾名思义，整个数据集备份。</p>
 <p>​    <strong>增量备份</strong>：仅备份最近一次完全备份或增量备份（如果有增量）以来的变化数据，备份快还原复杂</p>
-<p><img src="C:\Users\86139\Desktop\MySQL之备份与恢复.assets\image-20210915101524385.png" alt="image-20210915101524385"></p>
+<p><img src="https://raw.githubusercontent.com/return-blue/return-blue.github.io/master/images/MySQLbackup.assets/image-20210915101524385.png" alt="image-20210915101524385"></p>
 <p><strong>差异备份</strong>：仅备份最近一次完全备份以来变化的数据，备份较慢，还原简单</p>
-<p><img src="C:\Users\86139\Desktop\MySQL之备份与恢复.assets\image-20210915112203723.png" alt="image-20210915112203723"></p>
+<p><img src="https://raw.githubusercontent.com/return-blue/return-blue.github.io/master/images/MySQLbackup.assets/image-20210915112203723.png" alt="image-20210915112203723"></p>
 <p><strong>冷备</strong>：读、写操作均不可进行，数据库停止服务<br><strong>温备</strong>：读操作可执行；但写操作不可执行<br><strong>热备</strong>：读、写操作均可执行<br> MyISAM：温备，不支持热备<br> InnoDB：都支持</p>
 <p>物理和逻辑备份</p>
 <p><strong>物理备份</strong>：直接复制数据文件进行备份，与存储引擎有关，占用较多的空间，速度快</p>
